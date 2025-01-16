@@ -4,6 +4,8 @@ import numpy as np
 import torch
 from PIL import Image
 from torch.nn.functional import cosine_similarity
+from unhcv.common.utils import find_path
+
 from segment_anything import sam_model_registry
 from segment_anything.predictor import SamPredictor
 from crop import find_smallest_bounding_square, draw_bb
@@ -46,7 +48,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    sam = sam_model_registry["vit_h"](checkpoint="models/sam_vit_h_4b8939.pth").cuda()
+    sam = sam_model_registry["vit_h"](checkpoint=find_path("model/sam/sam_vit_h_4b8939.pth")).cuda()
     predictor = SamPredictor(sam)
 
     remove_score = get_score(predictor, args)

@@ -1,0 +1,5 @@
+/home/yixing/train_outputs/checkpoint/unet_inpainting/attention_controlnet_inject_in_cross_share_query_entity_seg_add_entity_mask_compare_20000/checkpoint-20000/evaluation_coco
+/home/yixing/train_outputs/checkpoint/unet_inpainting/sd1.5/coco
+/home/yixing/train_outputs/checkpoint/unet_inpainting/mat/coco
+/home/yixing/train_outputs/checkpoint/unet_inpainting/clipaway/coco
+/home/yixing/train_outputs/checkpoint/unet_inpainting/powerpaint/entity_seg_powerv2_coco
