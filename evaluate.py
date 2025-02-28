@@ -51,6 +51,9 @@ class Metric:
         embeddings = self.predictor.get_aggregate_features(input_img, [mask_fg, mask_bg])
 
         remove_score = cosine_similarity(embeddings[0], embeddings[1]).item()
+        if np.isnan(remove_score):
+            remove_score = 0
+            print('nan')
         self.remove_score_sum += remove_score
         self.num += 1
 
